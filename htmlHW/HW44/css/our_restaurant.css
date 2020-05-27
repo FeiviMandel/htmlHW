@@ -1,0 +1,92 @@
+html {
+    font-size: 20px;
+    background-color: steelblue;
+    
+}
+
+body {
+    max-width: 550px;
+    margin: auto;
+}
+
+h1 {
+    color: rgb(228, 214, 19);
+    font-size: 3rem;
+    font-weight: 600;
+    text-shadow: 4px 1px 2px black;    
+}
+
+p {
+    color: rgb(124, 55, 5);
+    font-size: 1rem;    
+}
+
+h2 {
+    color: rgb(161, 228, 28);
+    font-size: 2em;    
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: rgb(250, 11, 238);
+}
+
+a:focus {
+    color: yellow;
+}
+
+a:active {
+    color: blue;
+}
+
+img {
+    float: left;
+    padding: 5px;
+}
+
+header, div {
+    overflow: auto;
+}
+
+header, h1, h2, h3 {
+    text-align: center;
+}
+
+header img {
+    float: none;
+}
+
+#alignRight {
+    float: right;
+}
+
+h3 {
+    color: lawngreen;
+    font-style: italic;
+}
+
+.menuItem {
+    border: 6px ridge rgb(94, 9, 192);
+    border-radius: 16px;
+}
+
+h4 {
+    transform: skew(0deg, -21deg);
+    font-size: 4em;
+    color: rgb(252, 252, 3);
+    text-align: center;
+    border: 30px dotted red;    
+}
+
+nav {
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+}
