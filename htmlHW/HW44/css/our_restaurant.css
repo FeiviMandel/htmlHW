@@ -1,12 +1,20 @@
 html {
     font-size: 20px;
-    background-color: steelblue;
-    
+    background-color: dimgray;
 }
 
 body {
-    max-width: 550px;
+    max-width: 750px;
+    vertical-align: top;
+    background-color: steelblue;    
     margin: auto;
+}
+
+article {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 9em;
+    border-left: 1px solid white;
 }
 
 h1 {
@@ -85,8 +93,19 @@ h4 {
     border: 30px dotted red;    
 }
 
-nav {
+/*nav {
     display: inline-block;
     width: 100px;
     vertical-align: top;
+}*/
+
+nav {
+    float: left;
+    width: 170px;
+    margin: auto;
+}
+
+/*nav li {
+    white-space: nowrap;
+    overflow: hidden;
 }
