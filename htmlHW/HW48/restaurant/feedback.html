@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant@PCS</title>
+    <link href="css/our_restaurant.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="images/restaurant@pcsIcon.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="our_menu.html">our menu</a></li>
+            <li><a href="chef's_special.html">chef's special</a></li>
+            <li><a href="soup_of_the_day.html">soup of the day</a></li>
+            <li><a href="menu_item_popularity.html">menu item by popularity</a></li>
+            <li><a href="feedback.html">feedback</a></li>
+        </ul>
+    </nav>
+    <article>
+        <header>
+            <h1>Restaurant@PCS</h1>
+            <img src="images/restaurant@pcs.jpg" alt="our restaurant"><!-- height="300" width="450"-->
+            <br>Established 2020<br>
+            <a href="index.html">home</a> | <a href="our_menu.html">our menu</a>
+        </header>
+        <hr>
+        <p>Please take a few moments to submit your feedback.</p>
+        <form method="post" action="feedback.php">
+            <label>Date:<input type="date" name="dateVisited" required /></label>
+            <label>First Name:<input name="firstName" placeholder="Enter your first name" required /></label>
+            <label>Last Name:<input name="lastName" placeholder="Enter your last name" required /></label>
+            <label>Email:<input type="email" name="email" placeholder="Enter your email" required /></label>
+            <label>Please rate your experience:<input type="range" name="rating" min="1" max="5" required /></label>
+            <p id="scale1">1</p>
+            <p id="scale2">2</p>
+            <p id="scale3">3</p>
+            <p id="scale4">4</p>
+            <p id="scale5">5</p>
+            <label>Comments:<textarea name="comments" placeholder="Enter your feedback" required
+                    maxlength="100"></textarea></label>
+            <!--label for="password">Password:</label><input type="password" id="password" name="password"
+                placeholder="Enter your password" required minlength="3" maxlength="6" value="test" />
+            <label for="age">Age:</label><input type="number" id="age" name="age" placeholder="Age" step=".01" />
+            <label for="color">Favorite Color:</label><input type="color" id="color" name="color" value="#2f3b98" />
+            
+            <label for="favoriteMonth">Favorite Month:</label><input type="month" id="favoriteMonth"
+                name="favoriteMonth" />
+            <label for="favoriteWeek">Favorite Week:</label><input type="week" id="favoriteWeek" name="favoriteWeek" />
+            <label for="telephone">Telephone:</label><input type="tel" id="telephone" name="telephone" />
+                        <label for="poll">Do you think Trump will win reelection:</label>
+            <input type="radio" id="poll" name="poll" value="yes" checked />Yes
+            <input type="radio" id="poll" name="poll" value="no" />No
+            <input type="radio" id="poll" name="poll" value="maybe" />Maybe
+            <br>
+            <label for="sides">Pick your sides:</label>
+            <input type="checkbox" id="sides" name="sides" value="fries">Fries
+            <input type="checkbox" id="sides" name="sides" value="onionrings" checked>Onion Rings
+            <input type="checkbox" id="sides" name="sides" value="rice">Rice
+            <br>
+            <label for="drink">Pick a drink:</label>
+            <select id="drink" name="drink" multiple>
+                <option value="1">Pepsi</option>
+                <option selected>Coke</option>
+                <option>7up</option>
+            </select-->
+
+            <input type="submit" value="submit feedback">
+            <!--input type="reset">
+
+            <button>Im a submit button</button>
+            <button type="reset">Im a reset button</button>
+            <button type="button">Im a plain old button</button>
+
+            <button class="styledButton">Click here to submit!</button-->
+        </form>
+    </article>
+
+</body>
+
+</html>
