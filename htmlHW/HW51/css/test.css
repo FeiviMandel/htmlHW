@@ -83,7 +83,7 @@ table {
     }
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 1000px){
     #products {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -187,6 +187,7 @@ ul li {
 
 nav {
    top: 0;
+   z-index: 1;
 }
 
 nav,footer {
