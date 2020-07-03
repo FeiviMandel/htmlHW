@@ -1,0 +1,376 @@
+html {
+    font-size: 20px;
+    background-color: dimgray;
+    /*background-image: url("../images/tiled_background.png");*/
+    /*margin: auto;*/
+}
+
+body {
+    max-width: 750px;
+    /*background-color: steelblue;*/
+    background-image: url("../images/tiled_background.png");
+    margin: auto;
+}
+
+h1 {
+    color: rgb(182, 85, 7);
+    font-size: 2em;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 4px 1px 2px black;    
+}
+
+
+@media screen and (max-width: 749px) {
+    nav {
+        /*float: left;*/
+        text-align: center;
+        margin: auto;        
+       /*width: 170px;*/
+        /*vertical-align: top;*/
+        /*position: fixed;*/
+    }
+
+    li {
+        list-style: none; 
+    }
+
+    h2 img {
+        display: none;
+    }
+
+    article {
+        max-width: 550px;
+        padding-left: 1em;
+        padding-right: 1em;
+        /*margin-left: 9em;*/
+        margin: auto;
+        background-image: url("../images/tiled_background.png");
+        /*border-left: 1px solid white;*/
+        /*display: inline-block;*/
+        /*box-sizing: border-box;*/
+        /*padding-left: 184px;
+        margin-left: 152px;*/
+    }
+}
+
+@media screen and (min-width: 750px) {
+    nav {
+        display: inline-block;
+        margin-right: 2em;
+        padding-right: 2em;
+        width: 170px;
+        /*border-right: 1px solid black;*/
+        position: fixed;
+        /*vertical-align: top;*/
+        margin: auto;
+    }
+
+    #ch_s {
+        position: relative;
+        max-width: 600px;
+        height: 75px;
+        box-sizing: border-box;    
+    }
+
+    article {
+        max-width: 550px;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-left: 9em;
+        background-image: url("../images/tiled_background.png");
+        border-left: 1px solid white;
+        display: inline-block;
+        box-sizing: border-box;
+        /*padding-left: 184px;
+        margin-left: 152px;*/
+    }
+}
+
+p {
+    color: rgb(124, 55, 5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section>p {
+    color: rgb(2, 138, 2);
+    font-size: 2em;
+}
+
+#absoluteLeft{
+    position: absolute;
+    left: 0;
+}
+
+#absoluteRight{
+    position: absolute;
+    right: 0;
+}
+
+h2 {
+    color: rgb(78, 138, 18);
+    font-family: 'Acme', sans-serif;
+    font-size: 2em; 
+    /*font-style: italic;*/
+    width: 450px;
+}
+
+h3{
+    display: inline-flex;
+    color: rgb(129, 2, 91);
+    font-family: 'Acme', sans-serif;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:link {
+    color: darkgreen;
+}
+
+a:visited {
+    color: rgb(253, 78, 33);
+}
+
+a:focus {
+    color: yellow;
+}
+
+a:active {
+    font-weight: bold;
+}
+
+img {
+    float: left;
+    padding: 5px;
+    clear: both;
+}
+
+div img {
+    height: 50px;
+    width: 50px;
+}
+
+section::first-line {
+    color: rgb(28, 2, 179);
+}
+
+header, div {
+    overflow: auto;
+}
+div {
+    background-color: steelblue;
+}
+
+p~div {
+    font-size: 25px;
+}
+
+header, h1, h2, h3, p {
+    text-align: center;
+}
+
+header img {
+    float: none;
+}
+
+#alignRight {
+    float: right;
+}
+
+.menuItem {
+    width: 150px;
+    height: 190px;
+    display: inline-flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    font-size: 15px;
+    border: 6px ridge rgb(94, 9, 192);
+    border-radius: 16px;
+    /*clear: both;*/
+    /*display: flex;*/
+    
+}
+
+.menuItemPrice {
+    /*text-align-last: right;*/
+    align-self: flex-end;
+    font-weight: bolder;
+    font-size: 18px;
+    height: 1.5em;
+    color: rgb(44, 32, 6);
+    margin-right: 1em;
+    margin-bottom: 0px;
+    /*float: right;
+    clear: both;*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#soup_of_the_day {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 175px 50px 175px;
+    grid-template-areas: 
+    "sun mon tues"
+    "tom chck sp_p"
+    "weds thurs ."
+    "b_s onion .";
+}
+
+#tomato_soup {
+    grid-area: tom;
+}
+
+#chicken_soup {
+    grid-area: chck;
+}
+
+#split_pea_soup {
+    grid-area: sp_p;
+}
+
+#butternut_squash_soup {
+    grid-area: b_s;
+}
+
+#onion_soup {
+    grid-area: onion;
+}
+
+#sun {
+    grid-area: sun;
+}
+
+#mon {
+    grid-area: mon;
+}
+
+#tues {
+    grid-area: tues;
+}
+
+#weds {
+    grid-area: weds;
+}
+
+#thur {
+    grid-area: thurs;
+}
+
+h4 {
+    max-width: 400px;
+    transform: skew(0deg, -21deg);
+    font-size: 4em;
+    color: rgb(252, 252, 3);
+    text-align: center;
+    border: 30px dotted red;   
+}
+
+video {
+    width: 250px;    
+}
+
+.directions {
+    max-width: 450px;
+}
+
+.__web-inspector-hide-shortcut__ {
+    visibility: hidden !important;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: .3em;
+}
+
+tfoot td, th {
+    background-color: lightsalmon;
+}
+
+caption {
+    /*font-size: 2em;*/
+    font-weight: bold;
+    color: #853288;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: aqua;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rebeccapurple;
+}
+
+input, textarea {
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    }
+
+input:not([type = submit]), textarea {
+    width: 75%;
+}
+
+input[type = submit] {
+    margin: 25px;
+    cursor: pointer;
+    color: rgb(12, 0, 255);
+}
+
+input:not([type = submit]):not([type = range]) {
+    margin-bottom: 15px;
+}
+
+input[type = range] {   
+    width: 258px;
+    margin-top: 15px;
+    margin-left: 47px;
+    margin-bottom: 45px;
+}
+
+form {
+    position: relative;
+    padding: 2em;
+    color: rgb(12, 0, 255);
+    border: 8px ridge sienna;
+    background-color: lightcoral;
+}
+
+#scale1 {
+    position: absolute;
+    color: rgb(12, 0, 255);
+    left: 87px;
+    top: 345px;    
+}
+
+#scale2 {
+    position: absolute;
+    color: rgb(12, 0, 255);
+    left: 148px;
+    top: 345px;    
+}
+#scale3 {
+    position: absolute;
+    color: rgb(12, 0, 255);
+    left: 209px;
+    top: 345px;    
+}
+#scale4 {
+    position: absolute;
+    color: rgb(12, 0, 255);
+    left: 270px;
+    top: 345px;    
+}
+#scale5 {
+    position: absolute;
+    color: rgb(12, 0, 255); 
+    left: 331px;
+    top: 345px;   
+}

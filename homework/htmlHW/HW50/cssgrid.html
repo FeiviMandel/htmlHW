@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+     /*body {
+            justify-content: center;
+            display: grid;
+            grid: 50px 50px 50px 50px 50px 50px 50px/ 50px;
+            gap: 3px;        
+        }
+
+        div {
+            background-color: orangered;
+        }
+
+           
+   @media screen and (min-width: 600px){
+        body {
+            justify-content: center;
+            display: grid;
+            grid: 50px 50px 50px 50px/ 50px 50px;
+            gap: 3px;        
+        }
+
+        div {
+            background-color: cyan;
+        }
+
+        div:nth-child(1) {
+            grid-column-end: span 2;            
+        }
+   }
+
+   @media screen and (min-width: 800px){
+        body {
+            justify-content: center;
+            display: grid;
+            grid: 50px 50px / 50px 50px 50px 50px;
+            gap: 3px;        
+        }
+
+        div {
+            background-color: firebrick;
+        }
+
+        div:nth-child(1) {
+            grid-column-end: span 2;           
+        }
+   }*/
+
+    /*body {
+            justify-content: center;
+            display: grid;
+            grid: 50px 50px 50px 50px 50px 50px 50px/ 50px;
+            gap: 3px;        
+        }
+
+        div {
+            background-color: orangered;
+        }
+
+           
+   @media screen and (min-width: 600px){
+        body {
+            justify-content: center;
+            display: grid;
+            grid: 50px 50px 50px 50px/ 50px 50px;
+            gap: 3px;        
+        }
+
+        div {
+            background-color: cyan;
+        }
+
+        div:nth-child(1) {
+            grid-column: 1/ 3;            
+        }
+   }
+
+   @media screen and (min-width: 800px){
+        body {
+            justify-content: center;
+            display: grid;
+            grid: 50px 50px / 50px 50px 50px 50px;
+            gap: 3px;        
+        }
+
+        div {
+            background-color: firebrick;
+        }
+
+        div:nth-child(1) {
+            grid-column: 1/3;            
+        }
+   }*/
+
+   body {
+        display: grid;
+        grid-template-columns: 50px;
+        grid-template-rows: 50px 50px 50px 50px 50px 50px 50px;
+        grid-template-areas:
+            "one"
+            "two" 
+            "three"
+            "four" 
+            "five"
+            "six" 
+            "seven";        
+        justify-content: center;
+        gap: 3px;        
+    }
+
+    div {
+        background-color: orangered;
+    }
+
+    div:nth-child(1) {
+        grid-area: one;            
+    }
+
+    @media screen and (min-width: 600px) {
+        body {
+            display: grid;
+            grid-template-columns: 50px 50px;
+            grid-template-rows: 50px 50px 50px 50px;
+            grid-template-areas:
+                "one one"
+                "two three"
+                "four five"
+                "six seven";        
+            justify-content: center;
+            gap: 3px;        
+        }
+
+        div {
+            background-color: cyan;
+        }
+
+        div:nth-child(1) {
+            grid-area: one;            
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+       body {
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px;
+            grid-template-rows: 50px 50px;
+            grid-template-areas:
+                "one one two three"
+                "four five six seven";        
+            justify-content: center;
+            gap: 3px;        
+        }
+
+        div {
+            background-color: firebrick;
+        }
+
+        div:nth-child(1) {
+            grid-area: one;            
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>
