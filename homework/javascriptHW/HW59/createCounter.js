@@ -1,3 +1,4 @@
+// SL - nice!
 window.app = window.app || {};
 window.app.counters = (function () {
     'use strict';

@@ -1,5 +1,8 @@
+// SL - 100
+// SL - nice!
 (function () {
     'use strict';
+    // SL - no for loops???
     window.app.counter.incrementCounter();
     window.app.counter.incrementCounter();
     window.app.counter.incrementCounter();
@@ -9,13 +12,13 @@
     window.app.counter.incrementCounter();
     window.app.counter.incrementCounter();
     window.app.counter.incrementCounter();
-    window.app.counter.incrementCounter();    
+    window.app.counter.incrementCounter();
     const cnt1 = window.app.counters.createCounter();
     cnt1.incrementCounter();
     cnt1.incrementCounter();
     cnt1.incrementCounter();
     cnt1.incrementCounter();
-    cnt1.incrementCounter();    
+    cnt1.incrementCounter();
     const cnt2 = window.app.counters.createCounter();
     cnt2.incrementCounter();
     cnt2.incrementCounter();

@@ -1,3 +1,4 @@
+// SL - nice!
 (function () {
     'use strict';
 
@@ -14,8 +15,8 @@
     const numbers = [2, 4, 6];
     const doubler = amount => amount * 2;
     const doubled = ourMap(numbers, doubler);
-    
+
     console.log('original array' ,numbers);
-    console.log('new array' ,doubled);  
+    console.log('new array' ,doubled);
 
 })();
