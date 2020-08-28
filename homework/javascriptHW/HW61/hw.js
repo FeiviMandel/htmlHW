@@ -20,7 +20,7 @@
         const colorsTable = get('colors');
         const newRow = colorsTable.insertRow();  
         newRow.addEventListener('click', function () {
-            setCss(document.body.style.backgroundColor = newBgColor);
+            setCss(document.body, 'backgroundColor', newBgColor);
             setCss(document.getElementById('text').style.color = newColor);
         }); 
         const backgroundColor = newRow.insertCell();
@@ -39,7 +39,7 @@
             j = 0;
         } 
         setCss(get('text'), 'color', newColor);
-        setCss(document.body.style.backgroundColor = newBgColor);
+        setCss(document.body, 'backgroundColor', newBgColor);
         
     }
 
