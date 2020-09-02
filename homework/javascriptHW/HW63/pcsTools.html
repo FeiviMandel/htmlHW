@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto dolorem, amet corporis cumque
+    quis a quibusdam reprehenderit optio eius aut necessitatibus natus autem nam neque aliquid iure, adipisci at.
+    Repellat sapiente nam eaque illum, similique deleniti animi est dicta. Molestiae reiciendis dolorum perferendis
+    quaerat consectetur ut impedit consequuntur! Aliquid.</p>
+  <h1 id="donald">Donald Trump</h1>
+  <h1 id="joe">Joe Biden</h1>
+  
+    <script src="pcsTools2.js"></script>
+  <script>
+    pcs('text').flash(10000, 1500);
+
+    pcs('donald')
+      .css('color', 'blue')
+      .click(() => console.log('The Donald was clicked!'));
+
+    const joe = pcs('joe');
+
+    joe.css('color', 'red');
+    console.log(joe.css('color'));
+
+    joe.hide();
+    setTimeout(() => joe.show(), 2000);
+
+   
+  </script>
+</body>
+
+</html>
