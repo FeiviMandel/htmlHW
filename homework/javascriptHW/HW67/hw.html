@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            text-align: center;
+        }
+
+        img {
+            width: 100px;
+        }
+
+        video {
+            width: 500px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        article,
+        aside {
+            padding: 1em;
+            box-sizing: border-box;
+        }
+
+        article {
+            flex: 2 1 50%;
+        }
+
+        aside {
+            flex: 1 2 25%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <article>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis iste facere autem inventore consectetur?
+        Accusamus debitis porro, incidunt molestias cum, magni, labore maiores dolorum harum quaerat officia ex vitae
+        aspernatur ratione. Id quis magnam tempora ullam est voluptas minima beatae labore repudiandae quam dicta
+        <hr>
+        <div>
+            <video id="video" controls></video>
+        </div>
+
+
+    </article>
+    <aside>
+        <h1>Kosher Videos</h1>
+        <h3>Choose a video</h3>
+        <div>
+            <ul id="videos">
+
+            </ul>
+        </div>
+    </aside>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="hw.js"></script>
+</body>
+
+</html>
