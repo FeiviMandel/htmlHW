@@ -1,5 +1,5 @@
 html {
-    padding-top: 2em;
+    padding-top: 3em;
     text-align: center;
     background-color: mediumslateblue;
     color: rgba(147, 241, 221, 0.938);
@@ -7,15 +7,14 @@ html {
 
 h1{
     color: lime;
-    font-size: 3em;
 }
 
-p,header{    
+p{    
     font-size: 1.5em;
 }
 
 form {
-    padding-top: 48px;
+    padding-top: 32px;
     padding-bottom: 54px;
 }
 
@@ -37,6 +36,17 @@ form {
     align-content: center;
 }
 
+form input, form button{
+    padding: .5em;
+}
+
+img {
+    width: 104px;
+    height: 70px;
+    border: 6px ridge rgb(94, 9, 192);
+    border-radius: 16px;
+}
+
 @media screen and (min-width: 600px) {
         #page ul {
         grid-template-columns: repeat(2, 1fr);
@@ -49,11 +59,41 @@ form {
     }
 }
 
-img {
-    width: 260px;
-    height: 175px;
-    border: 6px ridge rgb(94, 9, 192);
-    border-radius: 16px;
+@media screen and (min-width: 848px) {
+    img {
+        width: 156px;
+        height: 105px;
+    }
+}
+
+@media screen and (min-width: 1056px) {
+    img {
+        width: 208px;
+        height: 140px;
+    }
+}
+
+@media screen and (min-width: 1265px) {
+    img {
+        width: 260px;
+        height: 175px;
+    }
+
+    form input, form button{
+    padding: 1em;
+    }
+
+    form {
+    padding-top: 48px;
+    }
+
+    header{
+        font-size: 1.5em;
+    }
+
+    h1{
+        font-size: 3em;
+    }
 }
 
 nav ul {
@@ -67,10 +107,6 @@ input, button {
     border: 1.5px solid darkgray;
     border-radius: 4px;
     margin: 2px;
-}
-
-form input, form button{
-    padding: 1em;
 }
 
 .toggleButton{
@@ -107,42 +143,27 @@ nav {
     width: 100%;
 }
 
-.a {
-    transform: rotate(-11deg);
-    margin-left: -75px;
+@media screen and (min-width: 760px) {
+   .b,.d,.f,.h{
+        margin-left: 75px;
+    }
+}
+.a,.c,.h {
+    transform: rotate(-11deg);   
 }
 
 .b {
-    transform: rotate(7deg);
-    margin-left: 125px;
+    transform: rotate(7deg);   
 }
 
-.c{
-    transform: rotate(-11deg);
-    margin-left: -25px;
+.c,.g{
+   margin-left: -25px;
 }
 
-.d {
-    transform: rotate(11deg);
-    margin-left: 75px;
-}
-
-.e {
-    transform: rotate(11deg);
-    margin-left: -75px;
+.d,.e,.g {
+    transform: rotate(11deg);    
 }
 
 .f {
     transform: rotate(-7deg);
-    margin-left: 125px;
-}
-
-.g{
-    transform: rotate(11deg);
-    margin-left: -25px;
-}
-
-.h {
-    transform: rotate(-11deg);
-    margin-left: 75px;
 }
