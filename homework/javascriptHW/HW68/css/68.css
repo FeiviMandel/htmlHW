@@ -25,7 +25,7 @@ form {
     color: rgb(94, 9, 192);
     border: 6px ridge rgb(94, 9, 192);
     border-radius: 16px;
-
+    margin-bottom: 2em;
 }
 
 #page ul {
@@ -73,7 +73,151 @@ img {
     }
 }
 
+nav ul {
+    list-style-type: none;
+    padding-left: 5%;
+    text-align: left;
+}
+
+input, button {
+    box-shadow: 3px 3px 3px black;
+    border: 1.5px solid darkgray;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.toggleButton{
+    font-size: 2em;
+    margin: .5em;
+}
+
+@media screen and (min-width: 760px) {
+   #b,#d,#f,#h{
+        margin-left: 75px;
+    }
+}
+#a,#c,#h {
+    transform: rotate(-11deg);   
+}
+
+#b {
+    transform: rotate(7deg);   
+}
+
+#c,#g{
+    margin-left: -25px;
+}
+
+#d,#e,#g {
+    transform: rotate(11deg);    
+}
+
+#f {
+    transform: rotate(-7deg);
+}
+
+#page img {
+    width: 260px;
+    height: 175px;
+}
+
+.dropbtn {
+    margin-left: -23.5em;
+    background-color: rgb(194, 193, 193);
+    color: black;
+    padding: 0 .5em; 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    margin-left: -15em;
+    text-align: left;
+    display: none;
+    position: absolute;
+    background-color: #eeeeee;
+    min-width: 175px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a,.dropdown-content span {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+nav {
+    top: 0;
+    z-index: 1;
+    position: fixed;
+    background-color: lightgrey;
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .dropbtn {
+        margin-left: -29.75em;
+    }
+
+    .dropdown-content {
+        margin-left: -18.25em;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .dropbtn {
+        margin-left: -35.75em;
+    }
+
+    .dropdown-content {
+        margin-left: -21.15em;
+    }
+}
+
+@media screen and (min-width: 810px) {
+    .dropbtn {
+        margin-left: -42.75em;
+    }
+
+    .dropdown-content {
+        margin-left: -24.75em;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .dropbtn {
+        margin-left: -50.75em;
+    }
+
+    .dropdown-content {
+        margin-left: -28.65em;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .dropbtn {
+        margin-left: -60.75em;
+    }
+
+    .dropdown-content {
+        margin-left: -33.75em;
+    }
+}
+
 @media screen and (min-width: 1265px) {
+    .dropbtn {
+        margin-left: -69.75em;
+    }
+
+    .dropdown-content {
+        margin-left: -38.15em;
+    }
+
     img {
         width: 260px;
         height: 175px;
@@ -96,74 +240,16 @@ img {
     }
 }
 
-nav ul {
-    list-style-type: none;
-    padding-left: 5%;
-    text-align: left;
-}
-
-input, button {
-    box-shadow: 3px 3px 3px black;
-    border: 1.5px solid darkgray;
-    border-radius: 4px;
-    margin: 2px;
-}
-
-.toggleButton{
-    font-size: 2em;
-    margin: .5em;
-}
-
-/* @media screen and (min-width: 650px) {
-    #nextButton,#backButton{
-       margin: 10%;
+@media screen and (min-width: 1400px) {
+    .dropbtn {
+        margin-left: -79.75em;
     }
-} */
 
-
-a {
-    text-decoration: none;
-    color: rgb(94, 9, 192);
-}
-
-a:hover {
-    text-decoration: underline;
-    color: white;
-}
-
-ul li {
-    display: inline;
-}
-
-nav {
-    top: 0;
-    z-index: 1;
-    position: fixed;
-    background-color: indianred;
-    width: 100%;
-}
-
-@media screen and (min-width: 760px) {
-   .b,.d,.f,.h{
-        margin-left: 75px;
+    .dropdown-content {
+        margin-left: -43.25em;
     }
 }
-.a,.c,.h {
-    transform: rotate(-11deg);   
-}
 
-.b {
-    transform: rotate(7deg);   
-}
+.dropdown-content a:hover {background-color: rgb(216, 210, 210);}
 
-.c,.g{
-   margin-left: -25px;
-}
-
-.d,.e,.g {
-    transform: rotate(11deg);    
-}
-
-.f {
-    transform: rotate(-7deg);
-}
+.dropdown:hover .dropdown-content {display: block;}
