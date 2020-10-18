@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            text-align: center;
+        }
+
+        html,
+        body,
+        #map,
+        #sidebar {
+            height: 100%;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #sidebar li {
+            background-color: lawngreen;
+            border: 2px dashed rgb(126, 56, 192);
+            margin-bottom: .2em;
+            cursor: pointer;
+        }
+
+        #sidebar img {
+            vertical-align: middle;
+            margin-right: 1em;
+        }
+
+        #title:hover {
+            text-decoration: underline;
+        }
+
+        #sidebar {
+            width: 35%;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="sidebar">
+
+        <form id="form">
+            <input id="search" required />
+
+            <button>search</button>
+        </form>
+
+        <ul></ul>
+    </div>
+    <div id="map"></div>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXmQVI8TdMKqiTQR5n-Dj8b6VKokMvKeM&callback=initMap"
+        defer></script>
+    <script src="69.js"></script>
+</body>
+
+</html>
