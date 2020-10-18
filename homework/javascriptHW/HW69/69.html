@@ -9,6 +9,7 @@
     <style>
         html {
             text-align: center;
+            background-color: indigo;
         }
 
         html,
@@ -24,10 +25,15 @@
             padding: 0;
         }
 
+        form{
+            padding: 1em;
+        }
+
         #sidebar li {
             background-color: lawngreen;
-            border: 2px dashed rgb(126, 56, 192);
-            margin-bottom: .2em;
+            border: 2px dashed rgb(228, 66, 17);
+            border-radius: 10px;
+            margin-bottom: 1em;
             cursor: pointer;
         }
 
@@ -41,8 +47,10 @@
         }
 
         #sidebar {
+            padding: 2em;
             width: 35%;
             float: left;
+            overflow-y: auto;
         }
     </style>
 </head>
@@ -62,7 +70,7 @@
     </div>
     <div id="map"></div>
     <script src="jquery-3.5.1.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXmQVI8TdMKqiTQR5n-Dj8b6VKokMvKeM&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=<-------->&callback=initMap"
         defer></script>
     <script src="69.js"></script>
 </body>

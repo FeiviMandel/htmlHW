@@ -6,7 +6,7 @@ function initMap() {
     const img = $('#sidebar ul');
     const search = $('#search');
     const loc = { lat: 40.095657332825816, lng: -74.22207079649733 };
-    const map = new google.maps.Map(document.getElementById('map'), {
+    let map = new google.maps.Map(document.getElementById('map'), {
         center: loc,
         zoom: 2,
     });
@@ -14,6 +14,10 @@ function initMap() {
     const infoWindow = new google.maps.InfoWindow();
     form.submit(event => {
         event.preventDefault();
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: loc,
+            zoom: 2,
+        });
         img.empty();
         $.getJSON(`http://api.geonames.org/wikipediaSearch?q=${search.val()}&maxRows=10&username=feivi&type=json`)
             .then(x => {
