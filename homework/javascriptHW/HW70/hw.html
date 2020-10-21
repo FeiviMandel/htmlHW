@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+
+        #sidebar {
+            float: left;
+            width: 25%;
+            height: 100%;
+            border-right: 1px solid black;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #sidebar img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 1em;
+        }
+
+        #sidebar li {
+            border: 1px solid black;
+            margin-bottom: 1em;
+            cursor: pointer;
+        }
+
+        .title:hover {
+            text-decoration: underline;
+        }
+
+        .summary {
+            display: none;
+        }
+
+        #map {
+            height: 100%;
+            width: 75%;
+        }
+
+        #tag {
+            margin-top: .5em;
+            margin-left: .5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sidebar">
+        <form id="searchform">
+            <input id="tag" placeholder="search" required />
+            <input id="rows" type="number" min="1" max="100" step="1" value="10" />
+            <button>search</button>
+        </form>
+        <hr />
+        <ul></ul>
+    </div>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<>&libraries=drawing&callback=initMap"
+        defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="hw.js"></script>
+</body>
+
+</html>
