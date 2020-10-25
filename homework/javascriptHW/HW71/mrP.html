@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            background-image: url('partsImages/background2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+
+        #sidebar {
+            float: left;
+            width: 15%;
+            height: 100%;
+            border: 1px solid black;
+            margin-left: 2em;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        h1 {
+            color: magenta;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #sidebar img:not(#body){
+            /* width: 50px; */
+            height: 100px;
+            vertical-align: middle;
+            margin-right: 1em;
+        }
+        h2{
+            color:salmon;
+        }       
+
+        #sidebar li {
+            margin-bottom: 1em;
+            cursor: pointer;
+        }
+
+        .parts {
+            position: absolute;
+            visibility: hidden;
+        }
+        #toolButtons{
+            text-align: center;
+        }
+
+        button {
+            width: 75px;
+            padding: 1em;
+        }
+
+         #body {
+            height: 450px;
+            top: 150px;
+            left: 550px;
+        }
+    </style>
+</head>
+
+<body>
+    <audio src="media/CarefreeMelody.mp3" autoplay loop></audio>
+    <h1>Mr. Potato Head Builder</h1>
+    <div id="sidebar">
+        <div id="toolButtons">
+            <h2>click on each button to see the corresponding body parts</h2>
+            <button id="hatB">hat</button>
+            <button id="glassesB">glasses</button>
+            <button id="mouthB">mouth</button>
+            <button id="eyesB">eyes</button>
+            <button id="noseB">nose</button>
+            <button id="earsB">ears</button>
+            <button id="bodyB">body</button>
+            <button id="shoesB">shoes</button>
+        </div>
+        <ul>
+            <li><img class="parts" id="body" src="partsImages/body.jpg" alt=""></li>
+            <li><img class="parts sidebar" id="eyes" src="partsImages/eyes6.jpg" alt=""></li>
+            <li><img class="parts sidebar" id="shoes" src="partsImages/shoes3.jpg" alt=""></li>
+            <li><img class="parts sidebar" id="mouth" src="partsImages/mouth2.jpg" alt=""></li>
+            <li><img class="parts sidebar" id="lEar" src="partsImages/leftEar.jpg" alt=""></li>
+            <li><img class="parts sidebar" id="hat" src="partsImages/hat2.jpg" alt=""></li>
+            <li><img class="parts sidebar" id="rEar" src="partsImages/rightEar2.jpg" alt=""></li>
+            <li><img class="parts sidebar" id="nose" src="partsImages/nose1.jpg" alt=""></li>
+            <li><img class="parts sidebar" id="glasses" src="partsImages/glasses2.jpg" alt=""></li>
+        </ul>
+    </div>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="mrP.js"></script>
+</body>
+
+</html>
