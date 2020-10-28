@@ -12,6 +12,7 @@
     const eyes = $('#eyesB');
     const nose = $('#noseB');
     const ears = $('#earsB');
+    const arms = $('#armsB');
     const shoes = $('#shoesB');
     const body = $('#bodyB');
     
@@ -34,6 +35,10 @@
     ears.click(() => {
         $('#lEar').css("visibility", "visible");
         $('#rEar').css("visibility", "visible");
+    });
+    arms.click(() => {
+        $('#arm1').css("visibility", "visible");
+        $('#arm2').css("visibility", "visible");
     });
     shoes.click(() => {
         $('#shoes').css("visibility", "visible");
