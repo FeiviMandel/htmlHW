@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        #controls {
+            position: absolute;
+        }
+
+        #quantity{
+            width: 75px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="controls">
+        color: <input type="color" id="color">
+        <!-- size: <input type="number" id="size" min="1" max="200" value="20">
+        speed: <input type="number" id="speed" min="1" max="6" value="1"> -->
+        quantity: <input type="number" id="quantity" value="1">
+        <button id="add">add</button>
+    </div>
+    <canvas id="theCanvas"></canvas>
+    <script src="hw.js"></script>
+</body>
+
+</html>
