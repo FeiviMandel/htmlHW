@@ -22,34 +22,29 @@
             }
             return this.totalOrder;
         }
+        br() {
+           let br = document.createElement("br");
+            document.body.append(br);
+        }
         print() {
             document.body.append(`Customer: ${this.customer} `);
-            let br = document.createElement("br");
-            document.body.append(br);
+            this.br();
             document.body.append(`Address: ${this.address}`);
-            br = document.createElement("br");
-            document.body.append(br);
+            this.br();
             document.body.append(`total: ${this.total}`);
-            br = document.createElement("br");
-            document.body.append(br);
-            br = document.createElement("br");
-            document.body.append(br);
+            this.br();
+            this.br();
             document.body.append('Items:');
             for (let index = 0; index < this.items.length; index++) {
-                br = document.createElement("br");
-                document.body.append(br);
+                this.br();
                 document.body.append(`Item: ${this.items[index].name} `);
-                br = document.createElement("br");
-                document.body.append(br);
+                this.br();
                 document.body.append(`Quantity: ${this.items[index].quantity}`);
-                br = document.createElement("br");
-                document.body.append(br);
+                this.br();
                 document.body.append(`Price: ${this.items[index].price}`);
-                br = document.createElement("br");
-                document.body.append(br);
+                this.br();
             }
-            br = document.createElement("br");
-            document.body.append(br);
+            this.br();
         }
     }
     fetch('javaScriptQuiz.json')
