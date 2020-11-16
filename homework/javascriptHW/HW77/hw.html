@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" />
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            background-color: chartreuse;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            color: mediumblue;
+        }
+
+        header {
+            display: grid;
+            height: 64px;
+            grid-template-columns: 1fr, 1fr, 1fr;
+            grid-template-areas:
+                "a .  b c"
+        }
+
+        #buttonSpan {
+            grid-area: a;
+            height: 64px;
+        }
+
+        h2 {
+            margin: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1{
+               display: none;
+            }
+        }
+
+        #help {
+            box-sizing: border-box;
+            margin-top: 1.2em;
+            margin-left: 41%;
+            padding: .5em;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
+
+        h1 {
+            grid-area: b;
+        }
+
+        #scores {
+            grid-area: c;
+            height: 64px;
+           }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span id="buttonSpan"><button id="help">Help</button></span>
+        <h1>PCS Snake Game</h1>
+        <div id="scores">
+            <h2 id="highScore"></h2>
+            <h2 id="score"></h2>
+        </div>
+
+
+    </header>
+
+    <audio id="eat" src="media/hit.mp3"></audio>
+    <audio id="lose" src="media/horn.mp3"></audio>
+    <canvas id="theCanvas"></canvas>
+    <script src="messageBoxPlayAgain.js"></script>
+    <script src="messageBoxHelp.js"></script>
+    <script src="hw.js"></script>
+</body>
+
+</html>

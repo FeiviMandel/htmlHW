@@ -29,7 +29,7 @@
             this.br();
             document.body.append(`Address: ${this.address}`);
             this.br();
-            document.body.append(`total: ${this.total}`);
+            document.body.append(`total: $${this.total}`);
             this.br();
             this.br();
             document.body.append('Items:');
@@ -39,7 +39,7 @@
                 this.br();
                 document.body.append(`Quantity: ${this.items[index].quantity}`);
                 this.br();
-                document.body.append(`Price: ${this.items[index].price}`);
+                document.body.append(`Price: $${this.items[index].price}`);
                 this.br();
             }
             this.br();
