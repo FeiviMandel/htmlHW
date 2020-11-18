@@ -6,7 +6,7 @@ window.pcs.messageBoxHelp = (function () {
     let leftOffset = -150;
     let topOffset = -75;
     const width = 300;
-    const height = 250;
+    const height = 350;
     let nextZindex = 1;
 
     const modalOverlay = document.createElement('div');
@@ -27,14 +27,16 @@ window.pcs.messageBoxHelp = (function () {
         messageBox.appendChild(span);
 
         const buttons = document.createElement('div');
-
+        const help = document.getElementById('help');
         buttonArray.forEach(element => {
             const button = document.createElement('button');
             button.innerHTML = element;
             buttons.appendChild(button);
             button.addEventListener('click', () => {
+
+                help.disabled = false;
                 document.body.removeChild(messageBox);
-                modalOverlay.style.display = 'none';              
+                modalOverlay.style.display = 'none';
             });
         });
 

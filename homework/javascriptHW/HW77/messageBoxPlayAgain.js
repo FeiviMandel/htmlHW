@@ -5,8 +5,8 @@ window.pcs.messageBoxPlayAgain = (function () {
   const offset = 30;
   let leftOffset = -150;
   let topOffset = -75;
-  const width = 300;
-  const height = 150;
+  const width = 310;
+  const height = 220;
   let nextZindex = 1;
 
   const modalOverlay = document.createElement('div');
@@ -20,7 +20,7 @@ window.pcs.messageBoxPlayAgain = (function () {
   modalOverlay.style.display = 'none';
   document.body.appendChild(modalOverlay);
 
-  function show(msg, modal = false, buttonArray = ['ok']) {
+  function show(msg, buttonArray = ['ok'], modal = false) {
     const messageBox = document.createElement('div');
     const span = document.createElement('span');
     span.innerHTML = msg;
@@ -59,7 +59,7 @@ window.pcs.messageBoxPlayAgain = (function () {
 
     // probably should move this all to css file....
     messageBox.style.backgroundColor = 'lightgray';
-    messageBox.style.padding = '3em';
+    messageBox.style.paddingTop = '3em';
     messageBox.style.paddingBottom = '38px';
     messageBox.style.boxSizing = 'border-box';
     messageBox.style.width = `${width}px`;
@@ -78,7 +78,7 @@ window.pcs.messageBoxPlayAgain = (function () {
     span.style.display = 'inline-block';
 
     buttons.style.position = 'absolute';
-    buttons.style.bottom = '8px';
+    buttons.style.bottom = '20px';
     buttons.style.left = '0';
     buttons.style.marginTop = '2em';
     buttons.style.marginBottom = '2em';

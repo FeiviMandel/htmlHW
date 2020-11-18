@@ -24,7 +24,7 @@
     let appleX;
     let appleY;
     let score = 0;
-    let highScore = localStorage.highScore;
+    let highScore = localStorage.highScore || 0;
     const help = document.getElementById('help');
     const eat = document.getElementById('eat');
     const lose = document.getElementById('lose');
@@ -35,6 +35,7 @@
     const snake = new Image();
     snake.src = 'images/snakehead.png';
     help.addEventListener('click', () => {
+        help.disabled = true;
         window.pcs.messageBoxHelp.show('The object of this game is to move the "snake" around the board trying to eat as many apples as you can. The player uses the arrow keys to move the snake around the board. For each apple that the snake eats, you get another point. The game ends when the snake moves off the screen. Good Luck!');
     });
     function randomApple() {
@@ -42,11 +43,12 @@
         appleY = (Math.floor(Math.random() * (vert - 1))) * SNAKE_SIZE;
     }
     function snakeDraw() {
-
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.strokeRect(0, 0, canvas.width, canvas.height);
-        context.fillStyle = 'purple';
-        context.fillRect(0, 0, canvas.width, canvas.height);
+        context.lineWidth = 5;
+        context.clearRect(0, 0, canvas.width - LRMargin - context.lineWidth, canvas.height - TBMargin - context.lineWidth);
+        context.strokeStyle = 'silver';
+        context.strokeRect(0, 0, canvas.width - LRMargin - context.lineWidth, canvas.height - TBMargin - context.lineWidth);
+        context.fillStyle = 'darkorange';
+        context.fillRect(0, 0, canvas.width - LRMargin - context.lineWidth, canvas.height - TBMargin - context.lineWidth);
         context.drawImage(snake, snakeX, snakeY, SNAKE_SIZE, SNAKE_SIZE);
         context.drawImage(apple, appleX, appleY, SNAKE_SIZE, SNAKE_SIZE);
         score2.innerText = `High Score: ${highScore}`;
@@ -67,35 +69,50 @@
                 snakeX = 0;
                 snakeY = 0;
                 clearInterval(game);
+                if (highScore === 0) {
+                    localStorage.highScore = highScore;
+                }
                 if (score > localStorage.highScore) {
                     highScore = score;
+                    // window.pcs.messageBoxPlayAgain.buttons.style.bottom = '6px';
+                    window.pcs.messageBoxPlayAgain.show(`Game Over. <br> <br> Your Score: ${score} <br> Previous High Score: ${localStorage.highScore}`, ['Play Again']);
+                } else {
+                    window.pcs.messageBoxPlayAgain.show(`Game Over. <br> <br> Your Score: ${score} <br> High Score: ${highScore}`, ['Play Again']);
                 }
                 localStorage.highScore = highScore;
-                window.pcs.messageBoxPlayAgain.show('Sorry, You Lose.', true, ['Play Again']);
             }
             switch (direction) {
                 case 'ArrowLeft':
+                case '4':
                     snakeX -= SNAKE_SIZE;
                     break;
                 case 'ArrowRight':
+                case '6':
                     snakeX += SNAKE_SIZE;
                     break;
                 case 'ArrowUp':
+                case '8':
                     snakeY -= SNAKE_SIZE;
                     break;
                 case 'ArrowDown':
+                case '2':
                     snakeY += SNAKE_SIZE;
                     break;
             }
 
-        }, 500);
+        }, 150);
 
         document.addEventListener('keydown', e => {
+            console.log(e.key);
             switch (e.key) {
                 case 'ArrowUp':
                 case 'ArrowDown':
                 case 'ArrowLeft':
                 case 'ArrowRight':
+                case '2':
+                case '4':
+                case '6':
+                case '8':
                     direction = e.key;
             }
         });
