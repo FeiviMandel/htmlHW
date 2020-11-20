@@ -23,7 +23,7 @@
     let apple;
     let speed = 500;
     
-    audio.play();
+    window.pcs.messageBoxHelp.show('The object of this game is to move the "snake" around the board trying to eat as many apples as you can. <br> Use the arrow keys to move the snake around the board. Press the space bar to pause or resume the game. For each apple that the snake eats, the snake grows longer, and you get another point. The game ends when the snake moves off the screen or if it crashes into itself. <br> <br> Good Luck!<br> <br> Press the spacebar to resume.');
 
     function resizeCanvas() {
         canvas.width = window.innerWidth - totalMarginWidth + LRMargin;
