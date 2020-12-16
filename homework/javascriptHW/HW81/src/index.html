@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            height: 100%;
+        }
+
+        html {
+            background-color: #f5f5f5f5;
+            ;
+        }
+
+        .tablescroll {
+            overflow-x: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 id="header">BUDGET APP</h3>
+
+    <form id="budgetForm">
+        Please Enter Your Budget <input id="budgetInput" step="1" type="number">
+        <button type="submit" id="calculate">Calculate</button>
+    </form>
+    <div id="budgetDiv">
+        <h3>BUDGET</h3>
+        <span id="budgetImg"></span>
+        <h2>$ <span id="budget">0</span></h2>
+    </div>
+    <div id="expensesDiv">
+        <h3>EXPENSES</h3>
+        <span id="expensesImg"></span>
+        <h2>$ <span id="expenses">0</span></h2>
+    </div>
+    <div id="balanceDiv">
+        <h3>BALANCE</h3>
+        <span id="balanceImg"></span>
+        <h2>$ <span id="balance">0</span></h2>
+    </div>
+
+    <form id="expensesForm">
+        Please Enter Your Expense <input id="expenseInput" type="text" required>
+        Please Enter Expense Amount <input id="expenseAmountInput" step="1" type="number" required>
+        <button type="submit" id="add">Add Expense</button>
+    </form>
+
+
+    <table id="expenseTable">
+        <thead>
+            <tr>
+                <th>Expense Title</th>
+                <th>Expense Value</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+    <!-- <script src="budget.js"></script>
+    <script src="expenses.js"></script>
+    <script src="balance.js"></script> -->
+</body>
+
+</html>

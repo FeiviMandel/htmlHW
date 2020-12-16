@@ -1,0 +1,140 @@
+body{
+   font-family: Arial, Helvetica, sans-serif;
+    align-content: center;
+    display: grid;   
+    grid-template-columns: 2fr,1fr,1fr,1fr;
+    /* grid-template-rows: repeat(2,1fr); */
+    grid-template-areas: 
+    "header header header header"
+    "bdgtForm budget expens balanc"
+    "expnForm tabl tabl tabl";
+}
+div{
+     text-align: center;
+}
+th{
+    padding-bottom: 1em;
+}
+td{
+      color: #8B0000;
+}
+table{
+    grid-area: tabl;
+    text-align: center;
+    /* align-content: center; */
+    display: grid;   
+    grid-template-columns: 3fr,3fr,1fr,1fr,1fr;
+    /* grid-template-rows: repeat(2,1fr); */
+    grid-template-areas: 
+    "expTtl expVal . edt del ";
+}
+#header {
+    grid-area: header;
+}
+#budgetForm {
+    grid-area: bdgtForm;
+}
+#budgetDiv {
+    grid-area: budget;
+}
+#expensesDiv{
+    grid-area: expens;
+}
+#balanceDiv {
+    grid-area: balanc;
+}
+#expensesForm {
+    grid-area: expnForm;
+}
+table th:nth-child(1)  {
+    grid-area: expTtl;
+}
+table th:nth-child(2) {
+    grid-area: expVal;   
+}
+table td:nth-child(3){
+    grid-area: edt;
+}
+table td:nth-child(4){
+     grid-area: del;
+}
+#expensesDiv h2{
+    color: #8B0000;
+}
+#balanceDiv h2,#budgetDiv h2{
+    color: #006400;
+}
+.editForm{ 
+    background-color: lightblue;
+    padding: 1em;
+    padding-bottom: 38px;
+    box-sizing : border-box;
+    width: 230px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid black;
+}
+#expensesForm{
+    font-size: .9em;
+    margin: 0;
+    padding: 1em;
+    padding-bottom: 38px;
+    padding-top: 10px;
+    box-sizing : border-box;
+    width: 300px;
+    height: 180px;    
+    border: 3px solid #8B0000;
+    border-radius: 5px;
+}
+#budgetForm{
+    font-size: .9em;
+    margin: 0;
+    padding: 1em;
+    padding-bottom: 38px;
+    padding-top: 10px;
+    box-sizing : border-box;
+    width: 300px;
+    height: 120px;    
+    border: 3px solid #006400;
+    border-radius: 5px;
+}
+#expensesForm input{
+    width: 95%;
+    border: 1px solid #8B0000;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-left: 0;
+}
+#budgetForm input{
+    width: 95%;
+    border: 1px solid #006400;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-left: 0;
+}
+#expensesForm button{
+    font-size: .9em;
+   color: #8B0000;
+    border: 1px solid #8B0000;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-left: 0;
+}
+#budgetForm button{
+    font-size: .9em;
+    color: #006400;
+    border: 1px solid #006400;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-left: 0;
+}

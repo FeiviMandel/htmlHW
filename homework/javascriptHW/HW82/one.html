@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const s1 = {
+      first: 'Chaim',
+      last: 'Gold'
+    };
+
+    const s2 = {
+      first: 'Abe',
+      last: 'Brown'
+    };
+
+    function studentId(student) {
+      if (student.last === 'Gold') {
+        return '1';
+      }
+      else if (student.last === 'Brown') {
+        return '2';
+      }
+    }
+    function identifyStudent(student) {
+      return <h1>student {studentId(student)}</h1>
+    }
+    ReactDOM.render(
+      <>
+        {identifyStudent(s1)}
+        {identifyStudent(s2)}
+      </>,
+      document.getElementById('root')
+    );
+
+  </script>
+</body>
+
+</html>
