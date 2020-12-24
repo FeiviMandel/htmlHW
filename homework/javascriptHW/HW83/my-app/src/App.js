@@ -31,7 +31,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <h1>PCS Weather App</h1>
-        <WeatherDetails weather={this.state.weather} />
+        <WeatherDetails foo ={this.state.weather} />
         <input type="number" onBlur={this.getTheWeather} />
       </div>
     );

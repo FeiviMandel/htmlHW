@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function WeatherDetails(props) {
     // 'use strict';
-    if (props.weather) {
-        const { location, description, picture } = props.weather;
+    if (props.foo) {
+        const { location, description, picture } = props.foo;
         return (
             <>
                 <h2>{location}</h2>
