@@ -10,22 +10,22 @@ export default class App extends Component {
     this.currentOperator = this.currentOperator || '';
     this.number1 = this.number1 || '';
     this.number2 = this.number2 || '';
-    // this.result = 0;
+    this.result = this.result || 0;
   }
   state = {
-    result: 0,
+    result: this.result,
     numberButtons: [
       {
-        id: 1,
-        name: '1'
+        id: 7,
+        name: '7'
       },
       {
-        id: 2,
-        name: '2'
+        id: 8,
+        name: '8'
       },
       {
-        id: 3,
-        name: '3'
+        id: 9,
+        name: '9'
       },
       {
         id: 4,
@@ -40,16 +40,16 @@ export default class App extends Component {
         name: '6'
       },
       {
-        id: 7,
-        name: '7'
+        id: 1,
+        name: '1'
       },
       {
-        id: 8,
-        name: '8'
+        id: 2,
+        name: '2'
       },
       {
-        id: 9,
-        name: '9'
+        id: 3,
+        name: '3'
       },
       {
         id: 0,
@@ -83,24 +83,18 @@ export default class App extends Component {
 
     if (!this.operatorPressed) {
       this.number1 += e.target.innerText;
-      this.setState({
-        result: this.number1
-      })
+      this.result = this.number1
     }
     if (this.operatorPressed) {
       this.number2 += e.target.innerText;
-      this.setState({
-        result: this.number2
-      })
+      this.result = this.number2
     }
-    console.log(this.number1, this.number2);
-
+    this.setState({
+      result: this.result
+    })
   }
   operatorClicked = e => {
     this.operatorPressed = true;
-    // this.setState({
-    //   result:''
-    // })
     if (e.target.innerText === '+') {
       this.currentOperator = '+';
     }
@@ -115,40 +109,31 @@ export default class App extends Component {
     }
     else if (e.target.innerText === '=') {
       if (this.currentOperator === '-') {
-        this.setState({
-         result: (parseFloat(this.number1) || 0) - (parseFloat(this.number2) || 0)
-        })
+        this.result = (parseFloat(this.number1) || 0) - (parseFloat(this.number2) || 0)
       }
       else if (this.currentOperator === '+') {
-        this.setState({
-          result : (parseFloat(this.number1) || 0) + (parseFloat(this.number2) || 0)
-        })
+        this.result = (parseFloat(this.number1) || 0) + (parseFloat(this.number2) || 0)
       }
       else if (this.currentOperator === '×') {
-        this.setState({
-          result : (parseFloat(this.number1) || 0) * (parseFloat(this.number2) || 0)
-        })
+        this.result = (parseFloat(this.number1) || 0) * (parseFloat(this.number2) ||1)
       }
       else if (this.currentOperator === '÷') {
-        this.setState({
-          result : (parseFloat(this.number1) || 0) / (parseFloat(this.number2) || 0)
-        })
+        this.result = (parseFloat(this.number1) || 0) / (parseFloat(this.number2) || 1)
       }
-      console.log(this.state.result);
       this.operatorPressed = false;
-      this.number1 = '';
+      this.number1 = this.result||'';
       this.number2 = '';
     }
-    // console.log(e.target.innerText);
+    this.setState({
+      result: this.result
+    })
   }
   render() {
     return (
-      <div>
+      <div className="App">
         <div id="screen">{this.state.result}</div>
-        <div className="App">
-          <h1 id = "numB">{this.state.numberButtons.map((numberButtons) => <NumberButtons numberButtons={numberButtons} key={numberButtons.id} numberClicked={this.numberClicked} />)} </h1>
-          <h1 id="opB">{this.state.operatorButtons.map((operatorButtons) => <OperatorButtons operatorButtons={operatorButtons} key={operatorButtons.id} operatorClicked={this.operatorClicked} />)} </h1>
-        </div>
+        <h1 id="numB">{this.state.numberButtons.map((numberButtons) => <NumberButtons numberButtons={numberButtons} key={numberButtons.id} numberClicked={this.numberClicked} />)} </h1>
+        <h1 id="opB">{this.state.operatorButtons.map((operatorButtons) => <OperatorButtons operatorButtons={operatorButtons} key={operatorButtons.id} operatorClicked={this.operatorClicked} />)} </h1>
       </div>
     );
   }
