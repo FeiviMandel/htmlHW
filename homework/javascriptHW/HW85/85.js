@@ -1,25 +1,12 @@
-// function fetch1() {
-// }
-// const title = $('#caption');
 const pageContent = $('#pageContent');
 const home = $('#home');
 
-// usersFetched = false;
-
-// postsFetched = false;
-// let commentsFetched = false;
 home.click(() => {
-
     start();
 });
-function start() {
-    // if (!usersFetched) {
-    $.getJSON(' https://jsonplaceholder.typicode.com/users')
-    // $.getJSON('users.json')
-        .then(users => {
-            // usersFetched = true;
-            // title.text('Users');
-            // const startUsers =
+function start() { 
+    $.getJSON(' https://jsonplaceholder.typicode.com/users')  
+        .then(users => {      
             pageContent.empty();
             $(`<h1>Users</h1>
             <hr>
@@ -33,14 +20,9 @@ function start() {
                    <div>website: ${u.website}</div>
                    <div>company: ${u.company.name}</div><hr>
                 </li>`)
-                    .appendTo(userList).click(() => {
-                        // if (!postsFetched) {
-                        $.getJSON(`https://jsonplaceholder.typicode.com/posts?userId=${u.id}`)
-                        // $.getJSON(`posts.json/posts?userId=${u.id}`)
-                            .then(posts => {
-                                // postsFetched = true;
-                                // title.text('Posts');
-                                // const postContent =
+                    .appendTo(userList).click(() => {               
+                        $.getJSON(`https://jsonplaceholder.typicode.com/posts?userId=${u.id}`)                      
+                            .then(posts => {                             
                                 pageContent.empty();
                                 $(`<h1>Posts</h1>
                                 <hr>
@@ -66,12 +48,9 @@ function start() {
                                                                 <div>
                                                                 <ul class = "comments" id="comment${p.id}">        
                                                                 </ul>
-                                                            </div>`).appendTo(postLi);
-                                            
-                                            $.getJSON(` https://jsonplaceholder.typicode.com/comments?postId=${p.id}`)
-                                            // $.getJSON('comments.json')
-                                                .then(comments => {
-                                                    // commentsFetched = true;
+                                                            </div>`).appendTo(postLi);                                            
+                                            $.getJSON(` https://jsonplaceholder.typicode.com/comments?postId=${p.id}`)                                            
+                                                .then(comments => {                                                   
                                                     comments.forEach(c => {
                                                         commentsLi = $(`#comment${p.id}`);
                                                         $(` <li id = "post${p.id}">
@@ -93,17 +72,10 @@ function start() {
                                     });
                                 });
                             })
-                            .catch(err => console.error(err));
-                        // }
-                        // else {
-                        //     // postContent;
-                        // }
+                            .catch(err => console.error(err));                      
                     });
             });
         })
-        .catch(err => console.error(err));
-    // } else {
-    //     // startUsers;
-    // }
+        .catch(err => console.error(err)); 
 }
 start();
