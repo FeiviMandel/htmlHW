@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Order } from './shared/order';
-import { Person } from './shared/person';
+// import { Person } from './shared/person';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,8 @@ import { Person } from './shared/person';
 })
 export class AppComponent {
   title = 'my-hw-app';
-  
-  customerName: Person = {
+  order: Order = {
+  customerName:{
     firstName: 'Chaim',
     lastName: 'Cohen',
 
@@ -20,9 +20,9 @@ export class AppComponent {
       state: 'New Jersey',
       zip: '08701'
     }
-  };
-  order: Order = {
-    customerName:this.customerName,
+  },
+  
+    // customerName:this.customerName,
     date: new Date(),
     item: {
       itemName: 'book',

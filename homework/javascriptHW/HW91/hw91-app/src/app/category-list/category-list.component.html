@@ -1,0 +1,12 @@
+<div>
+
+    <!-- <h2>Customer:</h2> -->
+    <!-- <app-category [category]="categoryList.category"></app-category> -->
+    <!-- <h2>Item</h2> -->
+    <ul>
+        <li *ngFor="let category of categoryList; let i = index;" [value]="i">
+            <!-- {{category}}<button (click)="deleteCategory(i)">delete</button> -->
+            <app-category [category]="category"></app-category>
+        </li>
+    </ul>
+</div>

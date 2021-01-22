@@ -1,0 +1,13 @@
+<h3>Enter A Zipcode To View The Weather</h3>
+<input #zipInput />
+<button (click)="onClickMe()" >go</button>
+
+<div *ngIf="weather">
+    {{weather.temp}}<br>
+    {{weather.name}}<br>
+    {{weather.description}}<br>
+<div class="row">
+    <img id="weatherIcon" class="mx-auto" [src]="weather.icon" />
+</div><br>
+    <br>
+</div>
