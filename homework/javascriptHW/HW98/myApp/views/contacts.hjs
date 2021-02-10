@@ -1,0 +1,5 @@
+<ul>
+    {{#contacts}}
+    <li><p>name: {{name}},</p><p> email: {{email}},</p><p> phone: {{phone}}</p></li>
+    {{/contacts}}
+</ul>
