@@ -1,0 +1,24 @@
+<link rel='stylesheet' href='/stylesheets/addContact.css' />
+
+<form id="contactForm" method="POST">
+    <div class="formGroup">
+        <label for="firstName">first:</label>
+        <input id="firstName" name="firstName" value="{{contact.firstName}}">
+    </div>
+    <div class="formGroup">
+        <label for="lastName">last:</label>
+        <input id="lastName" name="lastName"  value="{{contact.lastName}}" required>
+    </div>
+    <div class="formGroup">
+        <label for="email">email:</label>
+        <input id="email" name="email" type="email"  value="{{contact.email}}">
+    </div>
+    <div class="formGroup">
+        <label for="phone">phone:</label>
+        <input id="phone" name="phone"  value="{{contact.phone}}">
+    </div>
+    <div class="buttons">
+        <button class="btn">save</button>
+        <a class="btn" href="/contacts">cancel</a>
+    </div>
+</form>
