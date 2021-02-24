@@ -1,0 +1,7 @@
+<p>Welcome to {{ title }}</p>
+
+<form>
+    Please Enter Your User Name: <input  name="userName"  />
+    <button>Enter</button>
+</form>
+hello {{userName}}!!
